@@ -11,6 +11,8 @@ fn main() {
         "\n\nTHIS PROGRAM ALLOWS YOU TO SEND BYTES OF DATA TO A SERVER.\nHOWEVER, THIS PROGRAM DOES NOT SHOW THE SERVER RESPONSE.\n\n"
     );
 
+    info!("Server address: {ADDRESS}\n");
+
     if do_keep_connection_alive() {
         let mut conn: TcpStream = connect(ADDRESS).expect("Failed to create a connection");
         loop {
